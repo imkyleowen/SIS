@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Data</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	
+	<style>
+		/* Body & general fonts */
+		body {
+			background-color: #e9ecef;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding: 40px 15px;
+		}
+
+		/* Container for the form */
+		form {
+			background-color: #fff;
+			padding: 30px 40px;
+			border-radius: 12px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+			width: 380px;
+			margin: 0 auto;
+		}
+
+		h2 {
+			text-align: center;
+			color: #343a40;
+			font-weight: 700;
+			margin-bottom: 30px;
+			letter-spacing: 1px;
+		}
+
+		a {
+			color: #0d6efd;
+			text-decoration: none;
+			display: inline-block;
+			margin-left: 20px;
+			margin-bottom: 25px;
+			font-weight: 500;
+			font-size: 0.9rem;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0 15px;
+		}
+
+		td:first-child {
+			color: #495057;
+			font-weight: 600;
+			width: 30%;
+			padding-left: 5px;
+			vertical-align: middle;
+			font-size: 0.95rem;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 10px 14px;
+			border: 1.8px solid #ced4da;
+			border-radius: 8px;
+			font-size: 1rem;
+			transition: border-color 0.3s ease;
+		}
+
+		input[type="text"]:focus {
+			border-color: #0d6efd;
+			outline: none;
+			box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+		}
+
+		input[type="submit"] {
+			width: 100%;
+			padding: 12px 0;
+			background-color: #0d6efd;
+			color: white;
+			border: none;
+			border-radius: 10px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			margin-top: 10px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #084cdf;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Add Data</h2>
+	<p>
+		<a href="index.php">← Back to Home</a>
+	</p>
+
+	<form action="addAction.php" method="post" name="add">
+		<table width="100%" border="0">
+			<tr> 
+				<td>Name</td>
+				<td><input type="text" name="name" placeholder="Enter full name"></td>
+			</tr>
+			<tr> 
+				<td>Age</td>
+				<td><input type="text" name="age" placeholder="Enter age"></td>
+			</tr>
+			<tr> 
+				<td>Email</td>
+				<td><input type="text" name="email" placeholder="Enter email address"></td>
+			</tr>
+			<tr> 
+				<td>Course</td>
+				<td><input type="text" name="course" placeholder="Enter course"></td>
+			</tr>
+			<tr> 
+				<td></td>
+				<td><input type="submit" name="submit" value="Add"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
