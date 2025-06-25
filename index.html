@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Include DB connection
-require_once("dbConnection.php");
+require_once("dbConnection.html");
 
 // Handle bulk deletion
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_selected'])) {
@@ -43,10 +43,10 @@ $total_pages = ceil($total_students / $limit);
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Student List</h2>
-        <a href="logout.php" class="btn btn-danger">Logout</a>
+        <a href="logout.html" class="btn btn-danger">Logout</a>
     </div>
 
-    <a href="add.php" class="btn btn-success mb-3">Add New Data</a>
+    <a href="add.html" class="btn btn-success mb-3">Add New Data</a>
 
     <form method="POST" action="">
         <table class="table table-bordered table-striped">
@@ -71,8 +71,8 @@ $total_pages = ceil($total_students / $limit);
                         <td><?= htmlspecialchars($row['email']) ?></td>
                         <td><?= htmlspecialchars($row['course']) ?></td>
                         <td>
-                            <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                            <a href="edit.html?id=<?= $row['id'] ?>" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="delete.html?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
@@ -88,7 +88,7 @@ $total_pages = ceil($total_students / $limit);
     <nav>
         <ul class="pagination">
             <?php if ($page > 1): ?>
-                <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="?page=<?= $page - 1?>">Previous</a></li>
             <?php endif; ?>
             <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                 <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
